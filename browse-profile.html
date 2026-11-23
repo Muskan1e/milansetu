@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <title>Browse Profile | MilanSetu</title>
+</head>
+<body>
+  <!-- Shared header is rendered from js/app.js -->
+  <div id="header"></div>
+
+  <main>
+
+    <section class="page-banner browse-banner">
+      <h1>Browse Profile</h1>
+    </section>
+
+    <section class="container browse-page">
+      <form class="browse-search" id="search-form">
+        <label class="field grow"><span class="ico"><i data-icon="search"></i></span>
+          <input id="query" placeholder="Search someone by name or member ID...." aria-label="Search by name or member ID"/>
+        </label>
+        <label class="field"><span class="ico"><i data-icon="pin"></i></span>
+          <select id="loc" aria-label="Location">
+            <option>Location</option><option>Mumbai</option><option>Kolkata</option><option>Delhi</option><option>Punjab</option><option>Lucknow</option>
+          </select>
+        </label>
+        <button class="btn">Search</button>
+      </form>
+
+      <div class="browse-layout">
+        <aside class="filters" aria-label="Filters">
+          <div class="filters-head">
+            <h3>Filter By</h3>
+            <button class="reset" id="reset" type="button"><i data-icon="refresh"></i> Reset</button>
+          </div>
+          <div id="chip-groups"></div>
+          <button class="btn show-result" id="show-result" type="button">Show Result</button>
+        </aside>
+
+        <div class="browse-main" id="results-top">
+          <div class="profile-grid browse-grid" id="browse-profiles"></div>
+          <div class="pagination" id="pagination"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared footer is rendered from js/app.js -->
+  <div id="footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

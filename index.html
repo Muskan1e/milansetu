@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <title>Home | MilanSetu</title>
+</head>
+<body class="home">
+  <!-- Shared header is rendered from js/app.js -->
+  <div id="header"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="home-hero">
+      <div class="hero-art" role="img" aria-label="Bengali bride and groom"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+              <h1>Find Your Forever<br/>With Someone Who,<br/><em>Truly Understands You</em></h1>
+          <p class="hero-desc">Curabitur Commodo Interdum Mi Vel Lacinia. Duis Mattis Lacus Quis Lectus Lacinia Feugiat. Vestibulum .</p>
+          <div class="hero-stats">
+            <div><span class="stat-icon"><i data-icon="users"></i></span><p><b>5 Millions+</b><span>Members</span></p></div>
+            <div><span class="stat-icon"><i data-icon="shield"></i></span><p><b>100%</b><span>Verified Profile</span></p></div>
+            <div><span class="stat-icon"><i data-icon="lock"></i></span><p><b>Privacy</b><span>Protected</span></p></div>
+          </div>
+        </div>
+
+        <form action="browse-profile.html" class="hero-search">
+          <label>Looking For
+            <select><option>Bride</option><option>Groom</option></select>
+          </label>
+          <label>Age Range
+            <select><option>21 - 28</option><option>25 - 30</option><option>30 - 35</option></select>
+          </label>
+          <label>Religion
+            <select><option>Hindu</option><option>Sikh</option><option>Muslim</option></select>
+          </label>
+          <label>Community
+            <select><option>Any</option><option>General</option></select>
+          </label>
+          <label>Location
+            <select><option>Indian</option><option>Punjab</option><option>Delhi</option></select>
+          </label>
+          <button class="btn">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- WE BELIEVE -->
+    <section class="section container belief">
+      <div class="belief-photos">
+        <span class="belief-back" aria-hidden="true"></span>
+        <img alt="Bengali bride and groom during the wedding ritual" class="belief-front" src="assets/images/belief-front.jpg"/>
+      </div>
+      <div class="belief-copy">
+        <h2>We Believe In<br/>Relationships That Last</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis, arcu vel mattis tempor, leo nunc rutrum arcu, eu venenatis urna sem quis magna. Suspendisse in nibh facilisis, tincidunt ipsum at.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pellentesque nisl ac nisl tempor efficitur. Donec rhoncus lectus nibh, sed ornare est sollicitudin vitae. Praesent quis sem scelerisque, bibendum sem at, dignissim diam.</p>
+        <a class="btn" href="browse-profile.html">Make Your Profile</a>
+      </div>
+    </section>
+
+    <!-- RECENT PROFILES -->
+    <section class="section recent">
+      <div class="container">
+        <h2 class="section-title">Recent Joint Profile</h2>
+        <div class="profile-grid" id="home-profiles"></div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why">
+      <div class="container">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="features">
+          <article>
+            <i data-icon="shield"></i>
+            <h3>Verified</h3>
+            <p>Curabitur quis sapien sapien. Aenean eleifend lectus sit amet magna pellentesque vestibulum. Nullam ac condimentum tellus, in dapibus metus.</p>
+          </article>
+          <article>
+            <i data-icon="award"></i>
+            <h3>Trusted</h3>
+            <p>Curabitur quis sapien sapien. Aenean eleifend lectus sit amet magna pellentesque vestibulum. Nullam ac condimentum tellus, in dapibus metus.</p>
+          </article>
+          <article>
+            <i data-icon="star"></i>
+            <h3>Privacy First</h3>
+            <p>Curabitur quis sapien sapien. Aenean eleifend lectus sit amet magna pellentesque vestibulum. Nullam ac condimentum tellus, in dapibus metus.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section class="section container gallery-section">
+      <h2 class="section-title">Photo Gallery</h2>
+      <div class="photo-mosaic">
+        <div class="mosaic-col">
+          <img alt="Couple in a playful moment" src="assets/images/gallery-1.jpg"/>
+          <img alt="Couple seated on a decorated stage" src="assets/images/gallery-2.jpg"/>
+        </div>
+        <div class="mosaic-col">
+          <img alt="Couple on the steps of a heritage house" src="assets/images/gallery-3.jpg"/>
+          <img alt="Couple sharing a warm look" src="assets/images/gallery-4.jpg"/>
+        </div>
+        <div class="mosaic-col">
+          <img alt="Couple smiling at each other" src="assets/images/gallery-5.jpg"/>
+          <img alt="Couple in traditional wear" src="assets/images/gallery-6.jpg"/>
+        </div>
+        <div class="mosaic-col">
+          <img alt="Groom and bride portrait" src="assets/images/gallery-7.jpg"/>
+          <img alt="Couple in an outdoor garden" src="assets/images/gallery-8.jpg"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUCCESS STORY SLIDER -->
+    <section class="section stories-preview">
+      <div class="container">
+        <h2 class="section-title">Every Match Has A Beautiful Stories</h2>
+        <div class="slider" id="story-slider">
+          <div class="story-main">
+            <img alt="" src="assets/images/slider-1.jpg"/>
+            <div>
+              <blockquote></blockquote>
+              <h3></h3>
+              <div class="stars">&starf;&starf;&starf;&starf;&starf;</div>
+            </div>
+          </div>
+          <div class="story-next"><img alt="" src="assets/images/slider-2.jpg"/></div>
+        </div>
+        <div class="slider-arrows">
+          <button id="story-prev" aria-label="Previous story"><i data-icon="left"></i></button>
+          <button id="story-next" aria-label="Next story"><i data-icon="right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO STRIP -->
+    <section class="video-strip">
+      <button aria-label="Play story video" class="play-button" id="play-video"><i data-icon="play"></i></button>
+      <p class="video-note" id="video-note" role="status"></p>
+    </section>
+
+    <!-- APP PROMO -->
+    <section class="app-promo">
+      <div class="container app-flex">
+        <div class="app-copy">
+          <h2>Take Your Matches<br/>On The Go</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis, arcu vel mattis tempor, leo nunc rutrum arcu, eu venenatis urna sem quis magna. Suspendisse in nibh facilisis, tincidunt ipsum at,</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis, arcu vel mattis tempor, leo nunc rutrum arcu,</p>
+          <a class="btn" href="browse-profile.html">Download App</a>
+        </div>
+        <img class="app-phones" alt="MilanSetu mobile app screens" src="assets/images/app-phones.png"/>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared footer is rendered from js/app.js -->
+  <div id="footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

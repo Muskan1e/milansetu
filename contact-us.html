@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <title>Help | MilanSetu</title>
+</head>
+<body>
+  <!-- Shared header is rendered from js/app.js -->
+  <div id="header"></div>
+
+  <main>
+
+    <section class="page-banner contact-banner">
+      <h1>Contact</h1>
+    </section>
+
+    <section class="container contact-layout">
+      <div class="contact-form-col">
+        <div class="form-head">
+          <span class="form-icon"><i data-icon="mail"></i></span>
+          <div><h2>Send us a message</h2><p>Fill the form below and we will get back to you</p></div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <input placeholder="Your name" required aria-label="Your name"/>
+          <input placeholder="Email address" required type="email" aria-label="Email address"/>
+          <div class="form-pair">
+            <input placeholder="Phone number" aria-label="Phone number"/>
+            <input placeholder="Alternative number" aria-label="Alternative number"/>
+          </div>
+          <select aria-label="Subject"><option>Select Subject</option><option>Membership</option><option>Profile support</option></select>
+          <textarea placeholder="Your Message" required rows="3" aria-label="Your message"></textarea>
+          <button class="btn">Send Message</button>
+          <p id="contact-feedback" role="status"></p>
+        </form>
+      </div>
+
+      <aside class="contact-info">
+        <div><h3>Call Us</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis ante turpis.</p><a href="tel:+9135729064"><i class="ico" data-icon="phone"></i>+91 3572 9064</a></div>
+        <div><h3>Visit Us</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis ante turpis.</p><a href="#"><i class="ico" data-icon="pin"></i>Syambazar , Kolkata 755660</a></div>
+        <div><h3>Live Chat</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis ante turpis.</p><a href="mailto:hello@milansetu.example"><i class="ico" data-icon="chat"></i>Start Chat</a></div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Shared footer is rendered from js/app.js -->
+  <div id="footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

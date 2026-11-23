@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 110">
+<g fill="none" stroke="#e6b63f" stroke-linecap="round" stroke-linejoin="round">
+<path d="M90 14c-10-12-25-4-21 8 3 8 14 11 21 18 7-7 18-10 21-18 4-12-11-20-21-8Z" stroke-width="4"/>
+<path d="M90 39c-14-17-36-7-32 10 3 11 19 17 32 28 13-11 29-17 32-28 4-17-18-27-32-10Z" stroke-width="4"/>
+<path d="M60 16c-9-8-18 1-12 9m72-9c9-8 18 1 12 9" stroke-width="3"/>
+<path d="M90 76v-8" stroke-width="3"/>
+</g>
+<text x="90" y="94" text-anchor="middle" font-family="Georgia,serif" font-size="20" fill="#e6b63f">MilanSetu</text>
+<text x="90" y="105" text-anchor="middle" font-family="Arial,sans-serif" font-size="4.5" letter-spacing="1" fill="#d8b75f">MADE FOR MEANINGFUL CONNECTIONS</text>
+</svg>
