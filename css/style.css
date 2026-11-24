@@ -15,7 +15,8 @@
 :root {
     --container: 1520px;
     --content-w: 79%;
-    --gutter: 1.4rem;               /* side space on tablet / mobile only */
+    --gutter: 15px;                 /* left and right space on every screen */
+    --frame: 1920px;                /* design frame width */
 
     --pink: #ed4b83;
     --pink-dark: #d93d73;
@@ -69,11 +70,14 @@ h2 { font-size: clamp(2.2rem, 2.9vw, 3.2rem); line-height: 1.15; }
 
 /* Content width: full width on phones/tablets, 79% of the screen on large desktops.
    Using padding (not a % width) so it works on every screen size. */
+/* Design frame: 1920px wide, 15px left and right inside it.
+   On screens narrower than 1920px the content keeps the same 15px sides;
+   on wider screens the frame stays centred at 1920px. */
 .container {
     width: 100%;
-    max-width: var(--container);
+    max-width: var(--frame);
     margin-inline: auto;
-    padding-inline: max(var(--gutter), calc((100% - var(--content-w)) / 2));
+    padding-inline: var(--gutter);
 }
 
 [data-icon], .ico { display: inline-flex; }
@@ -498,7 +502,14 @@ h2 { font-size: clamp(2.2rem, 2.9vw, 3.2rem); line-height: 1.15; }
    FOOTER
 ============================================================ */
 .footer { background: var(--wine); color: #fff; padding: 4.4rem 0 1.4rem; }
-.footer-grid { display: grid; grid-template-columns: 2.33fr 1fr 1fr 1.55fr; gap: 2.4rem; }
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2.33fr 1fr 1fr 1.55fr;
+    gap: 2.4rem;
+    max-width: var(--frame);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+}
 .footer-logo { width: 9rem; height: 6.6rem; object-fit: contain; object-position: left center; margin: 0 0 .8rem; }
 .footer p, .footer a { font-size: 1rem; line-height: 1.8; color: #e6d0d9; }
 .footer-grid > div:first-child p { max-width: 24rem; }
@@ -534,8 +545,9 @@ h2 { font-size: clamp(2.2rem, 2.9vw, 3.2rem); line-height: 1.15; }
 .newsletter-note { color: #ffd3e0 !important; font-size: .9rem !important; margin-top: .5rem; }
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, .16);
-    margin-top: 2.6rem;
-    padding-top: 1.1rem;
+    max-width: var(--frame);
+    margin: 2.6rem auto 0;
+    padding: 1.1rem var(--gutter) 0;
     color: #d7bcc7;
     font-size: .85rem;
 }
@@ -654,7 +666,7 @@ h2 { font-size: clamp(2.2rem, 2.9vw, 3.2rem); line-height: 1.15; }
 .contact-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    padding: 8rem 3rem 5rem;
+    padding-block: 8rem 5rem;   /* vertical only: keeps the 15px side gutter */
 }
 .contact-form-col { padding-right: 4.4rem; }
 .form-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
