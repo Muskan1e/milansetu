@@ -41,7 +41,7 @@ html {
     text-size-adjust: 100%;
     overflow-x: hidden;
 }
-body { overflow-x: hidden; min-width: 0; }
+body { min-width: 0; }
 
 body {
     margin: 0;
@@ -54,7 +54,7 @@ body {
 }
 
 img { max-width: 100%; display: block; }
-html, body { overflow-x: hidden; }
+
 main, section, article, aside, footer { min-width: 0; max-width: 100%; }
 h1, h2, h3, h4 { margin: 0; }
 p { margin: 0; }
@@ -104,20 +104,28 @@ h2 { font-size: clamp(2.2rem, 2.9vw, 3.2rem); line-height: 1.15; }
 /* ============================================================
    HEADER  (white bar on inner pages, transparent on Home)
 ============================================================ */
-.site-header {
-    height: var(--header-h);
-    background: #fff;
+/* The sticky behaviour lives on #header (the wrapper), because it is the element
+   that spans the whole page. A sticky element can only move inside its parent,
+   so sticky on .site-header itself (whose parent is just the header) would not stick. */
+#header {
     position: sticky;
     top: 0;
     z-index: 50;
 }
+.site-header {
+    height: var(--header-h);
+    background: #fff;
+    position: relative;
+}
 .nav-wrap {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto 1fr auto;   /* logo always at the left edge, menu centred, tools right */
     align-items: center;
+    gap: 1.5rem;
 }
 .brand { display: inline-flex; align-items: center; justify-self: start; }
+.site-header nav { justify-self: center; }
 .brand img { height: calc(var(--header-h) - 1.2rem); width: auto; object-fit: contain; }
 .site-header nav { display: flex; gap: 2.1rem; }
 .site-header nav a {
@@ -150,8 +158,9 @@ h2 { font-size: clamp(2.2rem, 2.9vw, 3.2rem); line-height: 1.15; }
 .avatar img { width: 2.3rem; height: 2.3rem; border-radius: 50%; object-fit: cover; }
 .mobile-menu { display: none; background: none; border: 0; font-size: 1.6rem; color: var(--ink); cursor: pointer; }
 
-/* Home: the header floats on top of the hero photo */
-.home .site-header { position: absolute; left: 0; right: 0; background: transparent; }
+/* Home: the header floats on top of the hero photo (not sticky) */
+.home #header { position: absolute; left: 0; right: 0; top: 0; }
+.home .site-header { background: transparent; }
 
 /* ============================================================
    HOME – HERO
@@ -560,7 +569,7 @@ h2 { font-size: clamp(2.2rem, 2.9vw, 3.2rem); line-height: 1.15; }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    align-items: stretch;
+    align-items: stretch;   /* all three cards share the same top and bottom line */
 }
 .plan {
     position: relative;
@@ -571,9 +580,12 @@ h2 { font-size: clamp(2.2rem, 2.9vw, 3.2rem); line-height: 1.15; }
     box-shadow: 0 6px 24px rgba(77, 0, 19, .06);
     min-height: 38rem;
 }
+/* Gold: same top line as Silver and Platinum. It is highlighted with colour and a shadow, not by moving it. */
 .plan.gold {
     background: linear-gradient(180deg, #fff6fa 0%, #ffe2ee 100%);
-    margin: -.8rem 0;
+    margin: 0;
+    box-shadow: 0 14px 34px rgba(237, 75, 131, .18);
+    border: 1px solid #f7b6cd;
 }
 .plan h3 { font: 500 3rem/1.05 var(--head); color: #ee4a85; }
 .plan-caption { font-size: 1.05rem; color: #5f555a; margin: .3rem 0 1.4rem; }
